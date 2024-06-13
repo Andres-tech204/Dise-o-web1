@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="STYLESHEET" href="Styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <title>Arriendo de Hornos de Barro</title>
+    <meta charset="UTF-8">
+</head>    
+<body>
+    <h1 class="Centrar-texto">Arriendo de Hornos Artesanales</h1> 
+    <h2>En esta pagina podras encontrar 3 hornos distintos que podras ver para poder arrendar (o comprar) Hornos de barro, los cuales son ideales para poder cocinar pan amasado, pizzas, carnes, lo que desee el cliente.</h2>
+    <link rel="stylesheet" href="/styles.css">
+    <form class="Formulario-Centrado" action="/enviar_solicitud" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+
+        <label for="email">Correo electrónico (esto servira para ponernos en contacto con usted):</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="horno">Tipos de Hornos:</label>
+        <select id="horno" name="horno" required onchange="mostrarInfoHorno()">
+            <option value="Horno_pizzero">Horno Pizzero</option>
+            <option value="Horno_especial">Horno Especial</option>
+            <option value="Horno_comun">Horno Comun</option>
+        </select><br>
+        
+        <div id="infoHorno"></div>
+
+        <label for="experiencia">Especificaciones personales (color de horno, preferencias, etc):</label><br>
+        <textarea id="experiencia" name="experiencia" rows="4" required></textarea><br>
+
+        <input type="submit" value="Enviar Solicitud">
+    </form>
+    
+    <script src="script.js"></script>
+</body>
+</html>
